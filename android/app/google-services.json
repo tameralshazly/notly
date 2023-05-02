@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "939687044050",
+    "project_id": "notly-d1aaa",
+    "storage_bucket": "notly-d1aaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939687044050:android:ebd5cbcefa6fede7f5de0b",
+        "android_client_info": {
+          "package_name": "eg.notly.notly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939687044050-82aur2e85mjth7697tvsdh6o79080fqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwBMr9Ra0jHjgAJGtR7D4-9US1JY-5fYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939687044050-82aur2e85mjth7697tvsdh6o79080fqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
