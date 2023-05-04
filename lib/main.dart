@@ -3,8 +3,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:notly/views/login_view.dart';
 import 'package:notly/views/register_view.dart';
+import 'package:notly/views/notes_view.dart';
 import 'package:notly/views/verify_email_view.dart';
 import 'firebase_options.dart';
+import 'dart:developer' as devtools show log;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             final user = FirebaseAuth.instance.currentUser;
             if (user != null) {
               if (user.emailVerified) {
-                print('email is verified');
+                return const NotesView();
               } else {
                 return const VerifyEmailView();
               }
@@ -51,7 +53,6 @@ class _HomePageState extends State<HomePage> {
               return const LoginView();
             }
 
-            return const Text('Done');
           default:
             return const CircularProgressIndicator();
         }
@@ -59,3 +60,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+enum MenuAction { logout }
