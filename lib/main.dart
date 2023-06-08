@@ -13,7 +13,7 @@ void main() {
     MaterialApp(
       title: 'Notly App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       home: const HomePage(),
       routes: {
@@ -27,14 +27,9 @@ void main() {
   );
 }
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -52,7 +47,6 @@ class _HomePageState extends State<HomePage> {
             } else {
               return const LoginView();
             }
-
           default:
             return const CircularProgressIndicator();
         }

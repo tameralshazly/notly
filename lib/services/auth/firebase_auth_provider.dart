@@ -9,7 +9,14 @@ import 'package:firebase_auth/firebase_auth.dart'
 
 class FirebaseAuthProvider implements AuthProvider {
   @override
-  Future<AuthUser?> createUser({
+  Future<void> initialize() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
+
+  @override
+  Future<AuthUser> createUser({
     required String email,
     required String password,
   }) async {
@@ -50,7 +57,7 @@ class FirebaseAuthProvider implements AuthProvider {
   }
 
   @override
-  Future<AuthUser?> logIn({
+  Future<AuthUser> logIn({
     required String email,
     required String password,
   }) async {
@@ -96,12 +103,5 @@ class FirebaseAuthProvider implements AuthProvider {
     } else {
       throw UserNotLoggedInAuthException();
     }
-  }
-
-  @override
-  Future<void> initialize() async {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
   }
 }

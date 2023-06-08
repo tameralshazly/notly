@@ -61,7 +61,7 @@ void main() {
         user,
       );
 
-      expect(user!.isEmailVerified, false);
+      expect(user.isEmailVerified, false);
     });
 
     test('Logged in user should be able to get verified', () {
@@ -93,7 +93,7 @@ class MockAuthProvider implements AuthProvider {
   bool get isInitialized => _isInitialized;
   AuthUser? _user;
   @override
-  Future<AuthUser?> createUser({
+  Future<AuthUser> createUser({
     required String email,
     required String password,
   }) async {
@@ -115,7 +115,7 @@ class MockAuthProvider implements AuthProvider {
   }
 
   @override
-  Future<AuthUser?> logIn({
+  Future<AuthUser> logIn({
     required String email,
     required String password,
   }) {
