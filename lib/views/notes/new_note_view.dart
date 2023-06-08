@@ -3,7 +3,7 @@ import 'package:notly/services/auth/auth_service.dart';
 import 'package:notly/services/crud/notes_service.dart';
 
 class NewNoteView extends StatefulWidget {
-  const NewNoteView({super.key});
+  const NewNoteView({Key? key}) : super(key: key);
 
   @override
   State<NewNoteView> createState() => _NewNoteViewState();
@@ -40,14 +40,14 @@ class _NewNoteViewState extends State<NewNoteView> {
 
   Future<DatabaseNote> createNewNote() async {
     final existingNote = _note;
+
     if (existingNote != null) {
       return existingNote;
     }
     final currentUser = AuthService.firebase().currentUser!;
     final email = currentUser.email!;
     final owner = await _notesService.getUser(email: email);
-    final newawait = await _notesService.createNote(owner: owner);
-    return newawait;
+    return await _notesService.createNote(owner: owner);
   }
 
   void _deleteNoteIfTextIsEmpty() {
