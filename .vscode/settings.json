@@ -1,4 +1,6 @@
 {
     "cmake.configureOnOpen": false,
-    "cmake.sourceDirectory": "C:/dev/projects/flutter/notly/windows"
+    "cmake.sourceDirectory": "C:/dev/projects/flutter/notly/windows",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace"
 }

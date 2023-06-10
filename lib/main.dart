@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notly/constants/routes.dart';
 import 'package:notly/services/auth/auth_service.dart';
 import 'package:notly/views/login_view.dart';
-import 'package:notly/views/notes/new_note_view.dart';
+import 'package:notly/views/notes/create_update_note_view.dart';
 import 'package:notly/views/register_view.dart';
 import 'package:notly/views/notes/notes_view.dart';
 import 'package:notly/views/verify_email_view.dart';
@@ -22,7 +22,7 @@ void main() {
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
         verifyEmailRoute: (context) => const VerifyEmailView(),
-        newNoteRoute: (context) => const NewNoteView(),
+        createOrUpdateNoteRoute: (context) => const CreateUpdateNoteView(),
       },
     ),
   );
