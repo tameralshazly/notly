@@ -242,8 +242,10 @@ class NotesService {
     }
     try {
       final docsPath = await getApplicationDocumentsDirectory();
+
       final dbPath = join(docsPath.path, dbName);
       final db = await openDatabase(dbPath);
+      print(db.toString());
       _db = db;
 
       // create the user table

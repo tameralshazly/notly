@@ -9,6 +9,7 @@ import 'package:notly/views/verify_email_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
     MaterialApp(
       title: 'Notly App',

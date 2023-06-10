@@ -86,6 +86,7 @@ class _NewNoteViewState extends State<NewNoteView> {
         future: createNewNote(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
+            case ConnectionState.waiting:
             case ConnectionState.done:
               _note = snapshot.data as DatabaseNote;
               _setupTextControllerListener();
