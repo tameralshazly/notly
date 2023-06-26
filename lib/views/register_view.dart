@@ -62,6 +62,7 @@ class _RegisterViewState extends State<RegisterView> {
                 controller: _email,
                 enableSuggestions: false,
                 autocorrect: false,
+                autofocus: true,
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                   hintText: 'Enter your email here',
@@ -72,7 +73,6 @@ class _RegisterViewState extends State<RegisterView> {
                 obscureText: true,
                 enableSuggestions: false,
                 autocorrect: false,
-                autofocus: true,
                 decoration: const InputDecoration(
                   hintText: 'Enter your password here',
                 ),
