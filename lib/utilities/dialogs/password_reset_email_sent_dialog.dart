@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:notly/extensions/buildcontext/loc.dart';
 import 'package:notly/utilities/dialogs/generic_dialog.dart';
 
 Future<void> showPasswordResetSentDialog(BuildContext context) {
   return showGenericDialog<void>(
     context: context,
-    title: 'Password Reset',
-    content:
-        'We have sent you a passowrd reset link. Please check your email for more information.',
+    title: context.loc.password_reset,
+    content: context.loc.password_reset_dialog_prompt,
     optionBuilder: () => {
-      'Ok': null,
+      context.loc.ok: null,
     },
   );
 }
